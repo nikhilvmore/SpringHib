@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+	<session-factory>
+	<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+	<property name="hibernate.cache.use_second_level_cache">true</property>
+	<property name="cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+	<property name="hibernate.connection.username">root</property>
+	<property name="hibernate.connection.password">root</property>
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<property name="hibernate.hbm2ddl.auto">update</property>
+	<property name="hibernate.show_sql">true</property>
+	<property name="hibernate.format_sql">true</property>
+	<!-- <mapping resource="com/Nau/model/User.hbm.xml"/>-->
+	<mapping class="com.Nau.annotation.model.User"/>
+	<mapping class="com.Nau.SecondLevelCache.Employee"/>
+	
+	<mapping class="com.Nau.onetoone.StudentOTO"/>
+	<mapping class="com.Nau.onetoone.AddressOTO"/>
+	
+	<mapping class="com.Nau.composition.Customer"/>
+	<mapping class="com.Nau.composition.Address"/>
+	
+	<mapping class="com.Nau.coll.TeamLeader"/>
+	</session-factory>
+	
+	
+	</hibernate-configuration>
+	
+
+	
+	
+	

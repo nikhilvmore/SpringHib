@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.Nau.model" auto-import="false">
+<class name="User" table="User_Polaris">
+		<id name="uid" type="long">
+				<column name="p_uid"/>
+				<generator class="assigned"></generator>
+			</id>
+		<property name="userName">
+			<column name="p_username" />
+		</property>
+		<property name="userCity">
+			<column name="p_usercity" />
+		</property>
+</class>
+</hibernate-mapping>

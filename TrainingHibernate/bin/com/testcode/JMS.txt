@@ -1,0 +1,1 @@
+PTP or point-to-point and publish-subscribe. The first model (PTP) relies on the concept of message queues, where the key features are one consumer per message and no timing dependency between the sender and the receiver. The publish-subscribe model is vice versa: multiple consumers per message and a timing dependency between the sender and the receiver.
